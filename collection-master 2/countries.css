@@ -1,0 +1,106 @@
+body{
+background: url("backcon.001.jpeg") no-repeat fixed center;
+font-family: 'Sriracha', cursive;
+}
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+
+/*  COLUMN SETUP  */
+.col {
+	display: block;
+	float: left;
+    margin: 1% 0 1% 1.6%;
+    text-align: center;
+}
+
+
+.col:first-child { margin-left: 10px; }
+
+
+/*  GROUPING  */
+.group:before,
+.group:after {
+	content:"";
+	display:table;
+}
+.group:after {
+	clear:both;
+}
+.group {
+    zoom:1; /* For IE 6/7 */
+}
+
+/*  GRID OF THREE  */
+.span_1_of_3 {
+    position: relative;
+    top: 100px;
+    width: 14.2%;
+    border-style: double;
+border-radius: 10px;
+color: black;
+ height: 300px;
+ overflow: scroll;
+ 
+}
+
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+	.col { margin: 1% 0 1% 0%;}
+	.span_3_of_3, .span_2_of_3, .span_1_of_3 { width: 100%; }
+}
+
+a{
+text-decoration: none;
+color: black;
+}
+
+.con{
+    text-align: left;
+}
+
+h3{
+    position: -webkit-sticky;
+  position: sticky;
+   background-color: white; 
+  top: 0;
+}
+
+#myInput {
+  background-position: 10px 12px; /* Position the search icon */
+  background-repeat: no-repeat; /* Do not repeat the icon image */
+  position: relative;
+  top: 100px;
+  left: 275px;
+  width: 50%; /* Full-width */
+  font-size: 16px; /* Increase font-size */
+  padding: 12px 20px 12px 40px; /* Add some padding */
+  border-radius: 10px;
+  border-style: double;
+  margin-bottom: 12px; /* Add some space below the input */
+  text-align: center;
+}
+
+.back{
+    position: absolute;
+  top: 3px;
+  left: 16px;
+  font-size: 18px;
+  border-style: double;
+border-radius: 10px;
+color: black;
+text-align: center;
+}
+.home{
+    
+  position: relative;
+  top: 5px;
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+
+}
