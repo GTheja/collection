@@ -35,12 +35,13 @@ font-family: 'Sriracha', cursive;
 
 /*  GRID OF THREE  */
 .span_1_of_3 {
+    position: relative;
+    top: 100px;
     width: 14.2%;
     border-style: double;
 border-radius: 10px;
 color: black;
  height: 300px;
-   
  overflow: scroll;
  
 }
@@ -70,12 +71,36 @@ h3{
 }
 
 #myInput {
-  background-image: url('/css/searchicon.png'); /* Add a search icon to input */
   background-position: 10px 12px; /* Position the search icon */
   background-repeat: no-repeat; /* Do not repeat the icon image */
+  position: relative;
+  top: 100px;
+  left: 275px;
   width: 50%; /* Full-width */
   font-size: 16px; /* Increase font-size */
   padding: 12px 20px 12px 40px; /* Add some padding */
-  border: 1px solid #ddd; /* Add a grey border */
+  border-radius: 10px;
+  border-style: double;
   margin-bottom: 12px; /* Add some space below the input */
+  text-align: center;
+}
+
+.back{
+    position: absolute;
+  top: 3px;
+  left: 16px;
+  font-size: 18px;
+  border-style: double;
+border-radius: 10px;
+color: black;
+text-align: center;
+}
+.home{
+    
+  position: relative;
+  top: 5px;
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+
 }
