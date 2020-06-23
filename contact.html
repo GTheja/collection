@@ -41,12 +41,12 @@ input[type=submit] {
 
     </style>
     <body>
-        <div class="container" style="text-align: center;">
+        <div class="container" style="text-align: center;" >
             <h2>Contact Us</h2>
             <p>Any queries, Leave a message to us</p>
         </div>
         <div class="fo">
-            <form>
+            <form method="post" enctype="text/plain" name="contact_form" action="contact-form-handler.php">
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name" placeholder="Your name..."> 
                 <label for="email">email</label>
@@ -301,10 +301,11 @@ input[type=submit] {
                     <option value="Zimbabwe">Zimbabwe</option>
                 </select>
                 <label for="subject">Subject</label>
-                <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+                <textarea type="message" id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
                 <input type="submit" value="Submit">
             </form>
             
         </div>
+      
     </body>
 </html>

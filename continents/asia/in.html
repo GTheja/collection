@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <link rel="stylesheet" type="text/css" href="countries.css">
+    <link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
+</head>
+<style>
+    .tech-slideshow {
+        bottom: 25px;
+        height: 175px;
+        left: 105px;
+        max-width: 1000px;
+        margin: 0 auto;
+        position: relative;
+        overflow: hidden;
+        transform: translate3d(0, 0, 0);
+        border-radius: 10px;
+    }
+
+    .tech-slideshow>div {
+        height: 200px;
+        width: 2526px;
+        background: url("Screenshot 2020-06-22 at 6.49.37 PM.png");
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        transform: translate3d(0, 0, 0);
+    }
+
+    .tech-slideshow .mover-1 {
+        animation: moveSlideshow 25s linear infinite;
+    }
+
+    @keyframes moveSlideshow {
+        100% {
+            transform: translateX(-66.6666%);
+        }
+    }
+
+    .prof {
+        border-style: double;
+        border-radius: 10px;
+        height: 650px;
+    }
+
+    img {
+        position: absolute;
+        top: 20px;
+        left: 50px;
+        font-size: 18px;
+    }
+
+    h2 {
+        position: absolute;
+        left: 50px;
+        top: 200px;
+        font-size: 18px;
+    }
+
+    .tab {
+        position: absolute;
+        left: 50px;
+        top: 250px;
+        font-size: 18px;
+        float: left;
+        width: 10%;
+        height: 300px;
+        border: 1px solid rgb(255, 254, 254);
+        background-color: #ffffff;
+        overflow: scroll;
+    }
+
+    .tab button {
+        display: block;
+        background-color: inherit;
+        color: black;
+        padding: 10px 5px;
+        width: 80%;
+        border: none;
+        outline: none;
+        text-align: left;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .tab button:hover {
+        background-color: #ddd;
+    }
+
+    /* Create an active/current "tab button" class */
+    .tab button.active {
+        background-color: #ccc;
+    }
+
+    .tabcontent {
+        float: left;
+        padding: 0px 12px;
+        width: 72%;
+        height: 300px;
+        position: absolute;
+        left: 300px;
+        top: 250px;
+        font-size: 18px;
+
+    }
+</style>
+
+<body>
+    <div class="prof">
+        <img src="ad7c3466363a58ed8149505ff5d83b05.png">
+        <img src="https://www.countryflags.io/IN/shiny/64.png"><br>
+        <h2>India</h2>
+        <div class="tab">
+            <button class="tablinks" onclick="openCity(event, 'New South Wales')">New South Wales</button>
+            <button class="tablinks" onclick="openCity(event, 'Queensland')">Queensland</button>
+            <button class="tablinks" onclick="openCity(event, 'Northern Territory')">Northern Territory</button>
+            <button class="tablinks" onclick="openCity(event, 'Western Australia')">Western Australia</button>
+            <button class="tablinks" onclick="openCity(event, 'South Australia')">South Australia</button>
+            <button class="tablinks" onclick="openCity(event, 'Victoria')">Victoria</button>
+            <button class="tablinks" onclick="openCity(event, 'Australian Capital Territory')">Australian Capital
+                Territory</button>
+            <button class="tablinks" onclick="openCity(event, 'Tasmania')">Tasmania</button>
+        </div>
+
+        <div id="New South Wales" class="tabcontent">
+            <h3>New South Wales</h3>
+            <p>New South Wales</p>
+        </div>
+
+        <div id="Queensland" class="tabcontent">
+            <h3>Queensland</h3>
+            <p>come on</p>
+        </div>
+
+        <div id="Northern Territory" class="tabcontent">
+            <h3>Northern Territorye</h3>
+            <p>come one bris</p>
+        </div>
+        <div id="Western Australia" class="tabcontent">
+            <h3>Western Australia</h3>
+            <p>come one bris</p>
+        </div>
+        <div id="South Australia" class="tabcontent">
+            <h3>South Australia</h3>
+            <p>come one bris</p>
+        </div>
+        <div id="Victoria" class="tabcontent">
+            <h3>Victoria</h3>
+            <p>come one bris</p>
+        </div>
+        <div id="Australian Capital Territory" class="tabcontent">
+            <h3>Australian Capital Territory</h3>
+            <p>come one bris</p>
+        </div>
+        <div id="Tasmania" class="tabcontent">
+            <h3>Tasmania</h3>
+            <p>come one bris</p>
+        </div>
+
+        <div class="tech-slideshow">
+            <div class="mover-1"></div>
+        </div>
+
+
+
+
+    </div>
+
+    
+
+    <script>
+        function openCity(evt, cityName) {
+            // Declare all variables
+            var i, tabcontent, tablinks;
+
+            // Get all elements with class="tabcontent" and hide them
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            // Get all elements with class="tablinks" and remove the class "active"
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            // Show the current tab, and add an "active" class to the link that opened the tab
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+</body>
+
+</html>
