@@ -1,187 +1,310 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    * {
+      box-sizing: border-box
+    }
 
-    <link rel="stylesheet" type="text/css" href="countries.css">
-    <link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
+    body {
+      font-family: "Lato", sans-serif;
+    }
+
+    /* Style the tab */
+    .tab {
+      float: left;
+      border: 1px solid #ccc;
+      background-color: #f1f1f1;
+      position: relative;
+      width: 20%;
+      height: 500px;
+      top: 85px;
+      overflow-y: scroll;
+      overflow-x: hidden;
+
+    }
+
+    /* Style the buttons inside the tab */
+    .tab button {
+      display: block;
+      background-color: inherit;
+      color: black;
+      padding: 22px 16px;
+      width: 100%;
+      border: none;
+      outline: none;
+      text-align: left;
+      cursor: pointer;
+      transition: 0.3s;
+      font-size: 17px;
+    }
+
+    /* Change background color of buttons on hover */
+    .tab button:hover {
+      background-color: #ddd;
+    }
+
+    /* Create an active/current "tab button" class */
+    .tab button.active {
+      background-color: #ccc;
+    }
+
+    /* Style the tab content */
+    .tabcontent {
+      float: right;
+      padding: 0px 12px;
+      border: 1px solid #ccc;
+      width: 80%;
+      border-left: none;
+      height: 600px;
+      position: relative;
+      top: -80px;
+      bottom: 0px;
+
+
+    }
+
+    .tab-link {
+      background-color: #555;
+      color: white;
+      float: left;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 14px 16px;
+      font-size: 17px;
+      width: 25%;
+      overflow: auto;
+      
+     
+    }
+
+    .tab-link:hover {
+      background-color: #777;
+    }
+
+    /* Style the tab content (and add height:100% for full page content) */
+    .tab-content {
+      color: white;
+      display: none;
+      padding: 100px 20px;
+      height: 100%;
+
+    }
+
+    #Home {
+      background-color: none;
+    }
+
+    #News {
+      background-color: none;
+    }
+
+    #Contact {
+      background-color: none;
+    }
+
+    #About {
+      background-color: none;
+    }
+
+    img {
+      position: absolute;
+      top: 20px;
+      left: 50px;
+      font-size: 18px;
+
+    }
+
+    h2 {
+      position: relative;
+      top: 90px;
+      left: 50px;
+
+    }
+
+    body {
+      margin: 0;
+    }
+
+    .container {
+      display: flex;
+      position: absolute;
+      top: 55px;
+      height: 25vh;
+      width: 80%;
+      left: 20%;
+    }
+
+    .accordion {
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      flex: 1;
+      margin: 0;
+      padding: 0;
+      transition: all 600ms cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+
+    .accordion:hover {
+      flex-basis: 65vw;
+    }
+  </style>
 </head>
-<style>
-    .tech-slideshow {
-  bottom:25px;
-  height: 175px;
-  left: 105px;
-  max-width: 1000px;
-  margin: 0 auto;
-  position: relative;
-  overflow: hidden;
-  transform: translate3d(0, 0, 0);
-  border-radius: 10px;
-}
 
-.tech-slideshow > div {
-  height: 200px;
-  width: 2526px;
-  background: url("Screenshot 2020-06-22 at 6.49.37 PM.png");
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  transform: translate3d(0, 0, 0);
-}
- .tech-slideshow .mover-1 {
-  animation: moveSlideshow 25s linear infinite;
-} 
-@keyframes moveSlideshow {
-  100% { 
-    transform: translateX(-66.6666%);  
-  }
-}
-
-.prof{
-    border-style: double;
-    border-radius: 10px;
-    height: 650px;
-}
-
-img{
-  position: absolute;
-  top: 20px;
-  left: 50px;
-  font-size: 18px;
-}
-h2{
-     position: absolute;
-     left: 50px;
-     top: 200px;
-     font-size: 18px;
-}
-.tab{
-    position: absolute;
-     left: 50px;
-     top: 250px;
-     font-size: 18px;
-     float: left;
-     width: 10%;
-     height: 300px;
-    border: 1px solid rgb(255, 254, 254);
-    background-color: #ffffff;
-      overflow: scroll;
-}
-
-.tab button{
-display: block;
-  background-color: inherit;
-  color: black;
-  padding: 10px 5px;
-  width: 80%;
-  border: none;
-  outline: none;
-  text-align: left;
-  cursor: pointer;
-  transition: 0.3s;
-}
-.tab button:hover {
-  background-color: #ddd;
-}
-
-/* Create an active/current "tab button" class */
-.tab button.active {
-  background-color: #ccc;
-}
-.tabcontent {
-  float: left;
-  padding: 0px 12px;
-  width: 72%;
-  height: 300px;
-  position: absolute;
-  left: 300px;
-  top: 250px;
-  font-size: 18px;
-
-}
-
-</style>
 <body>
-<div class="prof">
-    <img src="Australia-03.png">
-    <img src="https://www.countryflags.io/AU/shiny/64.png"><br>
-    <h2>australia</h2>
-    <div class="tab">
-        <button class="tablinks" onclick="openCity(event, 'New South Wales')">New South Wales</button>
-        <button class="tablinks" onclick="openCity(event, 'Queensland')">Queensland</button>
-        <button class="tablinks" onclick="openCity(event, 'Northern Territory')">Northern Territory</button>
-        <button class="tablinks" onclick="openCity(event, 'Western Australia')">Western Australia</button>
-        <button class="tablinks" onclick="openCity(event, 'South Australia')">South Australia</button>
-        <button class="tablinks" onclick="openCity(event, 'Victoria')">Victoria</button>
-        <button class="tablinks" onclick="openCity(event, 'Australian Capital Territory')">Australian Capital Territory</button>
-        <button class="tablinks" onclick="openCity(event, 'Tasmania')">Tasmania</button>
-    </div>
 
+
+
+  <img src="Australia-03.png" width="100" height="100" left="50" position="absolute">
+  <img src="https://www.countryflags.io/AU/shiny/64.png"><br>
+  <h2>australia</h2>
+
+
+
+  <div class="tab">
+
+    <button class="tablinks" onclick="openCity(event, 'New South Wales')" id="defaultOpen">New South Wales</button>
+    <button class="tablinks" onclick="openCity(event, 'Queensland')">Queensland</button>
+    <button class="tablinks" onclick="openCity(event, 'Northern Territory')">Northern Territory</button>
+    <button class="tablinks" onclick="openCity(event, 'Western Australia')">Western Australia</button>
+    <button class="tablinks" onclick="openCity(event, 'South Australia')">South Australia</button>
+    <button class="tablinks" onclick="openCity(event, 'Victoria')">Victoria</button>
+    <button class="tablinks" onclick="openCity(event, 'Australian Capital Territory')">Australian Capital
+      Territory</button>
+    <button class="tablinks" onclick="openCity(event, 'Tasmania')">Tasmania</button>
+  </div>
+
+  <div class="container">
+    <div class="accordion"
+      style="background-image: url(https://images.pexels.com/photos/283196/pexels-photo-283196.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb)">
+    </div>
+    <div class="accordion"
+      style="background-image: url(https://images.pexels.com/photos/692064/pexels-photo-692064.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb)">
+    </div>
+    <div class="accordion"
+      style="background-image: url(https://images.pexels.com/photos/97904/pexels-photo-97904.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb)">
+    </div>
+    <div class="accordion"
+      style="background-image: url(https://images.pexels.com/photos/681405/pexels-photo-681405.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb)">
+    </div>
+    <div class="accordion"
+      style="background-image: url(https://images.pexels.com/photos/724712/pexels-photo-724712.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb)">
+    </div>
+    <div class="accordion"
+      style="background-image: url(https://images.pexels.com/photos/192774/pexels-photo-192774.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb)">
+    </div>
+    <div class="accordion"
+      style="background-image: url(https://images.pexels.com/photos/681335/pexels-photo-681335.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb)">
+    </div>
+    <div class="accordion"
+      style="background-image: url(https://images.pexels.com/photos/731082/pexels-photo-731082.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb)">
+    </div>
+  </div>
+
+  <div class="oo">
     <div id="New South Wales" class="tabcontent">
-        <h3>New South Wales</h3>
-        <p>New South Wales</p>
+      <button class="tab-link" onclick="openPage('Home', this, 'red')">Sydney</button>
+      <button class="tab-link" onclick="openPage('News', this, 'green')" id="defaultOpen">Newcatle</button>
+      <button class="tab-link" onclick="openPage('Contact', this, 'blue')">Central Coast</button>
+      <button class="tab-link" onclick="openPage('About', this, 'orange')">Wollongong</button>
+      <button class="tab-link" onclick="openPage('About', this, 'orange')">Maitiland</button>
+      <button class="tab-link" onclick="openPage('About', this, 'orange')">Tweed Heads</button>
+      <button class="tab-link" onclick="openPage('About', this, 'orange')">Wagga Wagga</button>
+      <button class="tab-link" onclick="openPage('About', this, 'orange')">Albury - Wodonga</button>
+      <button class="tab-link" onclick="openPage('About', this, 'orange')">Coffs Harbour</button>
+      <button class="tab-link" onclick="openPage('About', this, 'orange')">Port Macquarie</button>
+      <button class="tab-link" onclick="openPage('About', this, 'orange')">Canberra - Queanbeyan</button>
+      <button class="tab-link" onclick="openPage('About', this, 'orange')">Orange</button>
+      <button class="tab-link" onclick="openPage('About', this, 'orange')">Dubbo</button>
+      <button class="tab-link" onclick="openPage('About', this, 'orange')">Bathurst</button>
+      <button class="tab-link" onclick="openPage('About', this, 'orange')">Blue Mountains</button>
+      <button class="tab-link" onclick="openPage('About', this, 'orange')">Nowra - Bomaderry</button>
+
     </div>
-    
-    <div id="Queensland" class="tabcontent">
-        <h3>Queensland</h3>
-        <p>come on</p>
-    </div>
-    
-    <div id="Northern Territory" class="tabcontent">
-        <h3>Northern Territorye</h3>
-        <p>come one bris</p>
-    </div>
-    <div id="Western Australia" class="tabcontent">
-        <h3>Western Australia</h3>
-        <p>come one bris</p>
-    </div>
-    <div id="South Australia" class="tabcontent">
-        <h3>South Australia</h3>
-        <p>come one bris</p>
-    </div>
-    <div id="Victoria" class="tabcontent">
-        <h3>Victoria</h3>
-        <p>come one bris</p>
-    </div>
-    <div id="Australian Capital Territory" class="tabcontent">
-        <h3>Australian Capital Territory</h3>
-        <p>come one bris</p>
-    </div>
-    <div id="Tasmania" class="tabcontent">
-        <h3>Tasmania</h3>
-        <p>come one bris</p>
-    </div>
-    
-    <div class="tech-slideshow">
-        <div class="mover-1"></div>
-</div>
 
 
 
 
-</div>
+    <div id="Home" class="tab-content">
 
-<script>
+
+
+
+
+    </div>
+
+    <div id="News" class="tab-content">
+      <h3>News</h3>
+      <p>Some news this fine day!</p>
+    </div>
+
+    <div id="Contact" class="tab-content">
+      <h3>Contact</h3>
+      <p>Get in touch, or swing by for a cup of coffee.</p>
+    </div>
+
+    <div id="About" class="tab-content">
+      <h3>About</h3>
+      <p>Who we are and what we do.</p>
+    </div>
+
+  </div>
+
+  <div id="Paris" class="tabcontent">
+    <h3>Paris</h3>
+    <p>Paris is the capital of France.</p>
+  </div>
+
+  <div id="Tokyo" class="tabcontent">
+    <h3>Tokyo</h3>
+    <p>Tokyo is the capital of Japan.</p>
+  </div>
+
+
+
+
+
+  <script>
     function openCity(evt, cityName) {
-            // Declare all variables
-            var i, tabcontent, tablinks;
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(cityName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
 
-            // Get all elements with class="tabcontent" and hide them
-            tabcontent = document.getElementsByClassName("tabcontent");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-            }
 
-            // Get all elements with class="tablinks" and remove the class "active"
-            tablinks = document.getElementsByClassName("tablinks");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" active", "");
-            }
+    document.getElementById("defaultOpen").click();
 
-            // Show the current tab, and add an "active" class to the link that opened the tab
-            document.getElementById(cityName).style.display = "block";
-            evt.currentTarget.className += " active";
-        }
-</script>
+
+
+    function openPage(pageName, elmnt, color) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tab-content");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tab-link");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+      }
+      document.getElementById(pageName).style.display = "block";
+      elmnt.style.backgroundColor = color;
+    }
+
+
+    document.getElementById("defaultOpen").click();
+  </script>
+
 </body>
+
 </html>
