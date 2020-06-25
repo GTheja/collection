@@ -1,1 +1,1055 @@
-     
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            font-family: "Lato", sans-serif;
+        }
+
+        /* Style the tab */
+        .tab {
+            float: left;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+            position: relative;
+            width: 20%;
+            height: 515px;
+            top: 82px;
+            overflow-y: scroll;
+            overflow-x: hidden;
+        }
+
+            /* Style the buttons inside the tab */
+            .tab button {
+                display: block;
+                background-color: inherit;
+                color: black;
+                padding: 22px 16px;
+                width: 100%;
+                border: none;
+                outline: none;
+                text-align: left;
+                cursor: pointer;
+                transition: 0.3s;
+                font-size: 17px;
+            }
+
+                /* Change background color of buttons on hover */
+                .tab button:hover {
+                    background-color: #ddd;
+                }
+
+                /* Create an active/current "tab button" class */
+                .tab button.active {
+                    background-color: #ccc;
+                }
+
+        /* Style the tab content */
+        .tabcontent {
+            float: right;
+            padding: 0px 12px;
+            width: 80%;
+            border-left: none;
+            height: 600px;
+            position: relative;
+            top: -80px;
+            bottom: 0px;
+        }
+
+
+
+        .img1 {
+            position: absolute;
+            top: 0px;
+            left: 60px;
+            font-size: 18px;
+        }
+
+        .img2 {
+            width: 100px;
+            height: 100px;
+            left: 70px;
+            position: absolute;
+        }
+
+        h2 {
+            position: relative;
+            top: 90px;
+            left: 50px;
+        }
+
+
+        body {
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            position: absolute;
+            top: 0px;
+            height: 25vh;
+            width: 81%;
+            left: 19%;
+        }
+
+        .accordion {
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            flex: 1;
+            margin: 0;
+            padding: 0;
+            transition: all 600ms cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+
+            .accordion:hover {
+                flex-basis: 65vw;
+            }
+
+
+        .tabs {
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+            position: relative;
+            width: 20%;
+            height: 85.8%;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            left: 81%;
+            top: 27%;
+        }
+
+            /* Style the buttons inside the tab */
+            .tabs button {
+                background-color: inherit;
+                float: left;
+                border: none;
+                outline: none;
+                cursor: pointer;
+                padding: 22px 16px;
+                transition: 0.3s;
+                font-size: 15px;
+                width: 100%;
+            }
+
+                /* Change background color of buttons on hover */
+                .tabs button:hover {
+                    background-color: #ddd;
+                }
+
+                /* Create an active/current tablink class */
+                .tabs button.active {
+                    background-color: #ccc;
+                }
+
+        /* Style the tab content */
+        .tab-content {
+            display: none;
+            padding: 6px 12px;
+            border-top: none;
+            border-style: inset;
+            border-color: rgb(177, 190, 206);
+            position: relative;
+            height: 515px;
+            bottom: 58.8%;
+            width: 82%;
+            left: -1%;
+            overflow-y: scroll;
+        }
+
+        .ma {
+            overflow-y: hidden;
+            overflow-x: hidden;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .main {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        h3 {
+            font-size: 20px;
+            word-break: break-all;
+        }
+
+        .row {
+            margin: 10px -16px;
+        }
+
+            /* Add padding BETWEEN each column */
+            .row,
+            .row > .column {
+                padding: 8px;
+            }
+
+        /* Create three equal columns that floats next to each other */
+        .column {
+            float: left;
+            width: 33.33%;
+            display: none; /* Hide all elements by default */
+        }
+
+        /* Clear floats after rows */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Content */
+        .content {
+            background-color: white;
+            padding: 10px;
+        }
+
+        /* The "show" class is added to the filtered elements */
+        .show {
+            display: block;
+        }
+
+        /* Style the buttons */
+        .btn {
+            border: none;
+            outline: none;
+            padding: 12px 16px;
+            background-color: white;
+            cursor: pointer;
+        }
+
+            .btn:hover {
+                background-color: #ddd;
+            }
+
+            .btn.actives {
+                background-color: #666;
+                color: white;
+            }
+
+        .img5 {
+            position: absolute;
+            left: 80%;
+            width: 15%;
+            height: 20%;
+            top: -1px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="ma">
+
+
+
+        <img class="img2" src="Australia-03.png">
+        <img class="img1" src="https://www.countryflags.io/AU/shiny/64.png"><br>
+        <h2>australia</h2>
+        <div class="container">
+            <div class="accordion"
+                 style="background-image: url(https://images.pexels.com/photos/283196/pexels-photo-283196.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb)">
+            </div>
+            <div class="accordion"
+                 style="background-image: url(https://images.pexels.com/photos/692064/pexels-photo-692064.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb)">
+            </div>
+            <div class="accordion"
+                 style="background-image: url(https://images.pexels.com/photos/97904/pexels-photo-97904.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb)">
+            </div>
+            <div class="accordion"
+                 style="background-image: url(https://images.pexels.com/photos/681405/pexels-photo-681405.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb)">
+            </div>
+            <div class="accordion"
+                 style="background-image: url(https://images.pexels.com/photos/724712/pexels-photo-724712.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb)">
+            </div>
+            <div class="accordion"
+                 style="background-image: url(https://images.pexels.com/photos/192774/pexels-photo-192774.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb)">
+            </div>
+            <div class="accordion"
+                 style="background-image: url(https://images.pexels.com/photos/681335/pexels-photo-681335.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb)">
+            </div>
+            <div class="accordion"
+                 style="background-image: url(https://images.pexels.com/photos/731082/pexels-photo-731082.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb)">
+            </div>
+        </div>
+
+
+
+        <div class="tab">
+
+            <button class="tablinks" onclick="openCity(event, 'New South Wales')" id="defaultOpen">New South Wales</button>
+            <button class="tablinks" onclick="openCity(event, 'Queensland')">Queensland</button>
+            <button class="tablinks" onclick="openCity(event, 'Northern Territory')">Northern Territory</button>
+            <button class="tablinks" onclick="openCity(event, 'Western Australia')">Western Australia</button>
+            <button class="tablinks" onclick="openCity(event, 'South Australia')">South Australia</button>
+            <button class="tablinks" onclick="openCity(event, 'Victoria')">Victoria</button>
+            <button class="tablinks" onclick="openCity(event, 'Australian Capital Territory')">Australian Capital Territory</button>
+            <button class="tablinks" onclick="openCity(event, 'Tasmania')">Tasmania</button>
+        </div>
+
+
+
+        <div id="New South Wales" class="tabcontent">
+            <div class="tabs">
+                <button class="tab-links" onclick="openCitys(event, 'Sydney')" id="defaultOpen">Sydney</button>
+                <button class="tab-links" onclick="openCitys(event, 'Newcastle')">Newcastle</button>
+                <button class="tab-links" onclick="openCitys(event, 'Central Coast')">Central Coast</button>
+                <button class="tab-links" onclick="openCitys(event, 'Wollongong')">Wollongong</button>
+                <button class="tab-links" onclick="openCitys(event, 'Maitland')">Maitland</button>
+                <button class="tab-links" onclick="openCitys(event, 'Tweed Heads')">Tweed Heads</button>
+                <button class="tab-links" onclick="openCitys(event, 'Wagga Wagga')">Wagga Wagga</button>
+                <button class="tab-links" onclick="openCitys(event, 'Albury - Wodonga')">Albury - Wodonga</button>
+                <button class="tab-links" onclick="openCitys(event, 'Coffs Harbour')">Coffs Harbour</button>
+                <button class="tab-links" onclick="openCitys(event, 'Port Macquarie')">Port Macquarie</button>
+                <button class="tab-links" onclick="openCitys(event, 'Coffs Harbour')">Coffs Harbour</button>
+                <button class="tab-links" onclick="openCitys(event, 'Port Macquarie')">Port Macquarie</button>
+                <button class="tab-links" onclick="openCitys(event, 'Coffs Harbour')">Coffs Harbour</button>
+                <button class="tab-links" onclick="openCitys(event, 'Port Macquarie')">Port Macquarie</button>
+                <button class="tab-links" onclick="openCitys(event, 'Coffs Harbour')">Coffs Harbour</button>
+                <button class="tab-links" onclick="openCitys(event, 'Port Macquarie')">Port Macquarie</button>
+                <button class="tab-links" onclick="openCitys(event, 'Coffs Harbour')">Coffs Harbour</button>
+                <button class="tab-links" onclick="openCitys(event, 'Port Macquarie')">Port Macquarie</button>
+            </div>
+
+            <div id="Sydney" class="tab-content">
+
+                <div class="main">
+                    <h3>Sydney</h3>
+                    <p>Welcomes you</p>
+
+                    <img class="img5" src="a34bfb904d68626e18500535f8c1e6ec.jpg">
+
+                    <hr>
+
+                    <div id="myBtnContainer">
+                        <button class="btn actives" onclick="filterSelection('all')"> Show all</button>
+                        <button class="btn" onclick="filterSelection('Places')"> Places</button>
+                        <button class="btn" onclick="filterSelection('Traditional food')"> Traditional food</button>
+                        <button class="btn" onclick="filterSelection('Transportation')">Transportation</button>
+                        <button class="btn" onclick="filterSelection('Hotels')">Hotels & Hostels</button>
+                    </div>
+                </div>
+
+                <!-- Portfolio Gallery Grid -->
+                <div class="row">
+                    <div class="column Places">
+                        <div class="content">
+                            <img src="/w3images/mountains.jpg" alt="Mountains" style="width:100%">
+                            <h4>Mountains</h4>
+                            <p>Lorem ipsum dolor..</p>
+                        </div>
+                    </div>
+                    <div class="column Places">
+                        <div class="content">
+                            <img src="/w3images/lights.jpg" alt="Lights" style="width:100%">
+                            <h4>Lights</h4>
+                            <p>Lorem ipsum dolor..</p>
+                        </div>
+                    </div>
+                    <div class="column Places">
+                        <div class="content">
+                            <img src="/w3images/nature.jpg" alt="Nature" style="width:100%">
+                            <h4>Forest</h4>
+                            <p>Lorem ipsum dolor..</p>
+                        </div>
+                    </div>
+
+                    <div class="column Traditional food">
+                        <div class="content">
+                            <img src="/w3images/cars1.jpg" alt="Car" style="width:100%">
+                            <h4>Retro</h4>
+                            <p>Lorem ipsum dolor..</p>
+                        </div>
+                    </div>
+                    <div class="column Traditional food">
+                        <div class="content">
+                            <img src="/w3images/cars2.jpg" alt="Car" style="width:100%">
+                            <h4>Fast</h4>
+                            <p>Lorem ipsum dolor..</p>
+                        </div>
+                    </div>
+                    <div class="column Traditional food">
+                        <div class="content">
+                            <img src="/w3images/cars3.jpg" alt="Car" style="width:100%">
+                            <h4>Classic</h4>
+                            <p>Lorem ipsum dolor..</p>
+                        </div>
+                    </div>
+
+                    <div class="column Transportation">
+                        <div class="content">
+                            <img src="/w3images/people1.jpg" alt="Car" style="width:100%">
+                            <h4>Girl</h4>
+                            <p>Lorem ipsum dolor..</p>
+                        </div>
+                    </div>
+                    <div class="column Transportation">
+                        <div class="content">
+                            <img src="/w3images/people2.jpg" alt="Car" style="width:100%">
+                            <h4>Man</h4>
+                            <p>Lorem ipsum dolor..</p>
+                        </div>
+                    </div>
+                    <div class="column Transportation">
+                        <div class="content">
+                            <img src="/w3images/people3.jpg" alt="Car" style="width:100%">
+                            <h4>Woman</h4>
+                            <p>Lorem ipsum dolor..</p>
+                        </div>
+                    </div>
+
+
+                    <div class="column Hotels">
+                        <div class="content">
+                            <img src="/w3images/people3.jpg" alt="Car" style="width:100%">
+                            <h4>Woman</h4>
+                            <p>Lorem ipsum dolor..</p>
+                        </div>
+                    </div>
+
+
+                    <div class="column Hotels">
+                        <div class="content">
+                            <img src="/w3images/people3.jpg" alt="Car" style="width:100%">
+                            <h4>Woman</h4>
+                            <p>Lorem ipsum dolor..</p>
+                        </div>
+                    </div>
+
+
+                    <div class="column Hotels">
+                        <div class="content">
+                            <img src="/w3images/people3.jpg" alt="Car" style="width:100%">
+                            <h4>Woman</h4>
+                            <p>Lorem ipsum dolor..</p>
+                        </div>
+                    </div>
+                    <!-- END GRID -->
+                </div>
+
+                <!-- END MAIN -->
+            </div>
+
+
+
+        </div>
+        <div id="Newcastle" class="tab-content">
+            <h3>Newcastle</h3>
+            <p>write somthing</p>
+        </div>
+        <div id="Central Coast" class="tab-content">
+            <h3>Central Coast</h3>
+            <p>write somthing</p>
+        </div>
+        <div id="Wollongong" class="tab-content">
+            <h3>Wollongong</h3>
+            <p>write somthing</p>
+        </div>
+        <div id="Maitland" class="tab-content">
+            <h3>Maitland</h3>
+            <p>write somthing</p>
+        </div>
+        <div id="Tweed Heads" class="tab-content">
+            <h3>Tweed Headst</h3>
+            <p>write somthing</p>
+        </div>
+        <div id="Wagga Wagga" class="tab-content">
+            <h3>Wagga Wagga</h3>
+            <p>write somthing</p>
+        </div>
+        <div id="Albury - Wodonga" class="tab-content">
+            <h3>Central Coast</h3>
+            <p>write somthing</p>
+        </div>
+        <div id="Albury - Wodonga" class="tab-content">
+            <h3>Central Coast</h3>
+            <p>write somthing</p>
+        </div>
+        <div id="Coffs Harbour" class="tab-content">
+            <h3>Coffs Harbour</h3>
+            <p>write somthing</p>
+        </div>
+        <div id="Port Macquarie" class="tab-content">
+            <h3>Port Macquarie</h3>
+            <p>write somthing</p>
+        </div>
+    </div>
+
+    <div id="Queensland" class="tabcontent">
+        <div class="tabs">
+            <button class="tab-links" onclick="openCitys(event, 'hello')" id="defaultOpen">hello</button>
+            <button class="tab-links" onclick="openCitys(event, 'Newcastle')">Newcastle</button>
+            <button class="tab-links" onclick="openCitys(event, 'Central Coast')">Central Coast</button>
+            <button class="tab-links" onclick="openCitys(event, 'Wollongong')">Wollongong</button>
+            <button class="tab-links" onclick="openCitys(event, 'Maitland')">Maitland</button>
+            <button class="tab-links" onclick="openCitys(event, 'Tweed Heads')">Tweed Heads</button>
+            <button class="tab-links" onclick="openCitys(event, 'Wagga Wagga')">Wagga Wagga</button>
+            <button class="tab-links" onclick="openCitys(event, 'Albury - Wodonga')">Albury - Wodonga</button>
+            <button class="tab-links" onclick="openCitys(event, 'Coffs Harbour')">Coffs Harbour</button>
+            <button class="tab-links" onclick="openCitys(event, 'Port Macquarie')">Port Macquarie</button>
+            <button class="tab-links" onclick="openCitys(event, 'Coffs Harbour')">Coffs Harbour</button>
+            <button class="tab-links" onclick="openCitys(event, 'Port Macquarie')">Port Macquarie</button>
+            <button class="tab-links" onclick="openCitys(event, 'Coffs Harbour')">Coffs Harbour</button>
+            <button class="tab-links" onclick="openCitys(event, 'Port Macquarie')">Port Macquarie</button>
+            <button class="tab-links" onclick="openCitys(event, 'Coffs Harbour')">Coffs Harbour</button>
+            <button class="tab-links" onclick="openCitys(event, 'Port Macquarie')">Port Macquarie</button>
+            <button class="tab-links" onclick="openCitys(event, 'Coffs Harbour')">Coffs Harbour</button>
+            <button class="tab-links" onclick="openCitys(event, 'Port Macquarie')">Port Macquarie</button>
+        </div>
+
+        <div id="hello" class="tab-content">
+            <h3>hello</h3>
+            <p>write somthing.</p>
+        </div>
+        <div id="Newcastle" class="tab-content">
+            <h3>Newcastle</h3>
+            <p>write somthing</p>
+        </div>
+        <div id="Central Coast" class="tab-content">
+            <h3>Central Coast</h3>
+            <p>write somthing</p>
+        </div>
+        <div id="Wollongong" class="tab-content">
+            <h3>Wollongong</h3>
+            <p>write somthing</p>
+        </div>
+        <div id="Maitland" class="tab-content">
+            <h3>Maitland</h3>
+            <p>write somthing</p>
+        </div>
+        <div id="Tweed Heads" class="tab-content">
+            <h3>Tweed Headst</h3>
+            <p>write somthing</p>
+        </div>
+        <div id="Wagga Wagga" class="tab-content">
+            <h3>Wagga Wagga</h3>
+            <p>write somthing</p>
+        </div>
+        <div id="Albury - Wodonga" class="tab-content">
+            <h3>Central Coast</h3>
+            <p>write somthing</p>
+        </div>
+        <div id="Albury - Wodonga" class="tab-content">
+            <h3>Central Coast</h3>
+            <p>write somthing</p>
+        </div>
+        <div id="Coffs Harbour" class="tab-content">
+            <h3>Coffs Harbour</h3>
+            <p>write somthing</p>
+        </div>
+        <div id="Port Macquarie" class="tab-content">
+            <h3>Port Macquarie</h3>
+            <p>write somthing</p>
+        </div>
+    </div>
+
+    <div id="Northern Territory" class="tabcontent">
+        <div class="tabs">
+            <button class="tab-links" onclick="openCitys(event, 'hello')" id="defaultOpen">hello</button>
+            <button class="tab-links" onclick="openCitys(event, 'Newcastle')">Newcastle</button>
+            <button class="tab-links" onclick="openCitys(event, 'Central Coast')">Central Coast</button>
+            <button class="tab-links" onclick="openCitys(event, 'Wollongong')">Wollongong</button>
+            <button class="tab-links" onclick="openCitys(event, 'Maitland')">Maitland</button>
+            <button class="tab-links" onclick="openCitys(event, 'Tweed Heads')">Tweed Heads</button>
+            <button class="tab-links" onclick="openCitys(event, 'Wagga Wagga')">Wagga Wagga</button>
+            <button class="tab-links" onclick="openCitys(event, 'Albury - Wodonga')">Albury - Wodonga</button>
+            <button class="tab-links" onclick="openCitys(event, 'Coffs Harbour')">Coffs Harbour</button>
+            <button class="tab-links" onclick="openCitys(event, 'Port Macquarie')">Port Macquarie</button>
+            <button class="tab-links" onclick="openCitys(event, 'Coffs Harbour')">Coffs Harbour</button>
+            <button class="tab-links" onclick="openCitys(event, 'Port Macquarie')">Port Macquarie</button>
+            <button class="tab-links" onclick="openCitys(event, 'Coffs Harbour')">Coffs Harbour</button>
+            <button class="tab-links" onclick="openCitys(event, 'Port Macquarie')">Port Macquarie</button>
+            <button class="tab-links" onclick="openCitys(event, 'Coffs Harbour')">Coffs Harbour</button>
+            <button class="tab-links" onclick="openCitys(event, 'Port Macquarie')">Port Macquarie</button>
+            <button class="tab-links" onclick="openCitys(event, 'Coffs Harbour')">Coffs Harbour</button>
+            <button class="tab-links" onclick="openCitys(event, 'Port Macquarie')">Port Macquarie</button>
+        </div>
+
+        <div id="hello" class="tab-content">
+            <h3>hello</h3>
+            <p>write somthing.</p>
+        </div>
+        <div id="Newcastle" class="tab-content">
+            <h3>Newcastle</h3>
+            <p>write somthing</p>
+        </div>
+        <div id="Central Coast" class="tab-content">
+            <h3>Central Coast</h3>
+            <p>write somthing</p>
+        </div>
+        <div id="Wollongong" class="tab-content">
+            <h3>Wollongong</h3>
+            <p>write somthing</p>
+        </div>
+        <div id="Maitland" class="tab-content">
+            <h3>Maitland</h3>
+            <p>write somthing</p>
+        </div>
+        <div id="Tweed Heads" class="tab-content">
+            <h3>Tweed Headst</h3>
+            <p>write somthing</p>
+        </div>
+        <div id="Wagga Wagga" class="tab-content">
+            <h3>Wagga Wagga</h3>
+            <p>write somthing</p>
+        </div>
+        <div id="Albury - Wodonga" class="tab-content">
+            <h3>Central Coast</h3>
+            <p>write somthing</p>
+        </div>
+        <div id="Albury - Wodonga" class="tab-content">
+            <h3>Central Coast</h3>
+            <p>write somthing</p>
+        </div>
+        <div id="Coffs Harbour" class="tab-content">
+            <h3>Coffs Harbour</h3>
+            <p>write somthing</p>
+        </div>
+        <div id="Port Macquarie" class="tab-content">
+            <h3>Port Macquarie</h3>
+            <p>write somthing</p>
+        </div>
+    </div>
+    <div id="Western Australia" class="tabcontent">
+        <div class="tabs">
+            <button class="tab-links" onclick="openCitys(event, 'hello')" id="defaultOpen">hello</button>
+            <button class="tab-links" onclick="openCitys(event, 'Newcastle')">Newcastle</button>
+            <button class="tab-links" onclick="openCitys(event, 'Central Coast')">Central Coast</button>
+            <button class="tab-links" onclick="openCitys(event, 'Wollongong')">Wollongong</button>
+            <button class="tab-links" onclick="openCitys(event, 'Maitland')">Maitland</button>
+            <button class="tab-links" onclick="openCitys(event, 'Tweed Heads')">Tweed Heads</button>
+            <button class="tab-links" onclick="openCitys(event, 'Wagga Wagga')">Wagga Wagga</button>
+            <button class="tab-links" onclick="openCitys(event, 'Albury - Wodonga')">Albury - Wodonga</button>
+            <button class="tab-links" onclick="openCitys(event, 'Coffs Harbour')">Coffs Harbour</button>
+            <button class="tab-links" onclick="openCitys(event, 'Port Macquarie')">Port Macquarie</button>
+            <button class="tab-links" onclick="openCitys(event, 'Coffs Harbour')">Coffs Harbour</button>
+            <button class="tab-links" onclick="openCitys(event, 'Port Macquarie')">Port Macquarie</button>
+            <button class="tab-links" onclick="openCitys(event, 'Coffs Harbour')">Coffs Harbour</button>
+            <button class="tab-links" onclick="openCitys(event, 'Port Macquarie')">Port Macquarie</button>
+            <button class="tab-links" onclick="openCitys(event, 'Coffs Harbour')">Coffs Harbour</button>
+            <button class="tab-links" onclick="openCitys(event, 'Port Macquarie')">Port Macquarie</button>
+            <button class="tab-links" onclick="openCitys(event, 'Coffs Harbour')">Coffs Harbour</button>
+            <button class="tab-links" onclick="openCitys(event, 'Port Macquarie')">Port Macquarie</button>
+        </div>
+
+        <div id="hello" class="tab-content">
+            <h3>hello</h3>
+            <p>write somthing.</p>
+        </div>
+        <div id="Newcastle" class="tab-content">
+            <h3>Newcastle</h3>
+            <p>write somthing</p>
+        </div>
+        <div id="Central Coast" class="tab-content">
+            <h3>Central Coast</h3>
+            <p>write somthing</p>
+        </div>
+        <div id="Wollongong" class="tab-content">
+            <h3>Wollongong</h3>
+            <p>write somthing</p>
+        </div>
+        <div id="Maitland" class="tab-content">
+            <h3>Maitland</h3>
+            <p>write somthing</p>
+        </div>
+        <div id="Tweed Heads" class="tab-content">
+            <h3>Tweed Headst</h3>
+            <p>write somthing</p>
+        </div>
+        <div id="Wagga Wagga" class="tab-content">
+            <h3>Wagga Wagga</h3>
+            <p>write somthing</p>
+        </div>
+        <div id="Albury - Wodonga" class="tab-content">
+            <h3>Central Coast</h3>
+            <p>write somthing</p>
+        </div>
+        <div id="Albury - Wodonga" class="tab-content">
+            <h3>Central Coast</h3>
+            <p>write somthing</p>
+        </div>
+        <div id="Coffs Harbour" class="tab-content">
+            <h3>Coffs Harbour</h3>
+            <p>write somthing</p>
+        </div>
+        <div id="Port Macquarie" class="tab-content">
+            <h3>Port Macquarie</h3>
+            <p>write somthing</p>
+        </div>
+    </div>
+    <div id="South Australia" class="tabcontent">
+        <div class="tabs">
+            <button class="tab-links" onclick="openCitys(event, 'hello')" id="defaultOpen">hello</button>
+            <button class="tab-links" onclick="openCitys(event, 'Newcastle')">Newcastle</button>
+            <button class="tab-links" onclick="openCitys(event, 'Central Coast')">Central Coast</button>
+            <button class="tab-links" onclick="openCitys(event, 'Wollongong')">Wollongong</button>
+            <button class="tab-links" onclick="openCitys(event, 'Maitland')">Maitland</button>
+            <button class="tab-links" onclick="openCitys(event, 'Tweed Heads')">Tweed Heads</button>
+            <button class="tab-links" onclick="openCitys(event, 'Wagga Wagga')">Wagga Wagga</button>
+            <button class="tab-links" onclick="openCitys(event, 'Albury - Wodonga')">Albury - Wodonga</button>
+            <button class="tab-links" onclick="openCitys(event, 'Coffs Harbour')">Coffs Harbour</button>
+            <button class="tab-links" onclick="openCitys(event, 'Port Macquarie')">Port Macquarie</button>
+            <button class="tab-links" onclick="openCitys(event, 'Coffs Harbour')">Coffs Harbour</button>
+            <button class="tab-links" onclick="openCitys(event, 'Port Macquarie')">Port Macquarie</button>
+            <button class="tab-links" onclick="openCitys(event, 'Coffs Harbour')">Coffs Harbour</button>
+            <button class="tab-links" onclick="openCitys(event, 'Port Macquarie')">Port Macquarie</button>
+            <button class="tab-links" onclick="openCitys(event, 'Coffs Harbour')">Coffs Harbour</button>
+            <button class="tab-links" onclick="openCitys(event, 'Port Macquarie')">Port Macquarie</button>
+            <button class="tab-links" onclick="openCitys(event, 'Coffs Harbour')">Coffs Harbour</button>
+            <button class="tab-links" onclick="openCitys(event, 'Port Macquarie')">Port Macquarie</button>
+        </div>
+
+        <div id="hello" class="tab-content">
+            <h3>hello</h3>
+            <p>write somthing.</p>
+        </div>
+        <div id="Newcastle" class="tab-content">
+            <h3>Newcastle</h3>
+            <p>write somthing</p>
+        </div>
+        <div id="Central Coast" class="tab-content">
+            <h3>Central Coast</h3>
+            <p>write somthing</p>
+        </div>
+        <div id="Wollongong" class="tab-content">
+            <h3>Wollongong</h3>
+            <p>write somthing</p>
+        </div>
+        <div id="Maitland" class="tab-content">
+            <h3>Maitland</h3>
+            <p>write somthing</p>
+        </div>
+        <div id="Tweed Heads" class="tab-content">
+            <h3>Tweed Headst</h3>
+            <p>write somthing</p>
+        </div>
+        <div id="Wagga Wagga" class="tab-content">
+            <h3>Wagga Wagga</h3>
+            <p>write somthing</p>
+        </div>
+        <div id="Albury - Wodonga" class="tab-content">
+            <h3>Central Coast</h3>
+            <p>write somthing</p>
+        </div>
+        <div id="Albury - Wodonga" class="tab-content">
+            <h3>Central Coast</h3>
+            <p>write somthing</p>
+        </div>
+        <div id="Coffs Harbour" class="tab-content">
+            <h3>Coffs Harbour</h3>
+            <p>write somthing</p>
+        </div>
+        <div id="Port Macquarie" class="tab-content">
+            <h3>Port Macquarie</h3>
+            <p>write somthing</p>
+        </div>
+    </div>
+    <div id="Victoria" class="tabcontent">
+        <div class="tabs">
+            <button class="tab-links" onclick="openCitys(event, 'hello')" id="defaultOpen">hello</button>
+            <button class="tab-links" onclick="openCitys(event, 'Newcastle')">Newcastle</button>
+            <button class="tab-links" onclick="openCitys(event, 'Central Coast')">Central Coast</button>
+            <button class="tab-links" onclick="openCitys(event, 'Wollongong')">Wollongong</button>
+            <button class="tab-links" onclick="openCitys(event, 'Maitland')">Maitland</button>
+            <button class="tab-links" onclick="openCitys(event, 'Tweed Heads')">Tweed Heads</button>
+            <button class="tab-links" onclick="openCitys(event, 'Wagga Wagga')">Wagga Wagga</button>
+            <button class="tab-links" onclick="openCitys(event, 'Albury - Wodonga')">Albury - Wodonga</button>
+            <button class="tab-links" onclick="openCitys(event, 'Coffs Harbour')">Coffs Harbour</button>
+            <button class="tab-links" onclick="openCitys(event, 'Port Macquarie')">Port Macquarie</button>
+            <button class="tab-links" onclick="openCitys(event, 'Coffs Harbour')">Coffs Harbour</button>
+            <button class="tab-links" onclick="openCitys(event, 'Port Macquarie')">Port Macquarie</button>
+            <button class="tab-links" onclick="openCitys(event, 'Coffs Harbour')">Coffs Harbour</button>
+            <button class="tab-links" onclick="openCitys(event, 'Port Macquarie')">Port Macquarie</button>
+            <button class="tab-links" onclick="openCitys(event, 'Coffs Harbour')">Coffs Harbour</button>
+            <button class="tab-links" onclick="openCitys(event, 'Port Macquarie')">Port Macquarie</button>
+            <button class="tab-links" onclick="openCitys(event, 'Coffs Harbour')">Coffs Harbour</button>
+            <button class="tab-links" onclick="openCitys(event, 'Port Macquarie')">Port Macquarie</button>
+        </div>
+
+        <div id="hello" class="tab-content">
+            <h3>hello</h3>
+            <p>write somthing.</p>
+        </div>
+        <div id="Newcastle" class="tab-content">
+            <h3>Newcastle</h3>
+            <p>write somthing</p>
+        </div>
+        <div id="Central Coast" class="tab-content">
+            <h3>Central Coast</h3>
+            <p>write somthing</p>
+        </div>
+        <div id="Wollongong" class="tab-content">
+            <h3>Wollongong</h3>
+            <p>write somthing</p>
+        </div>
+        <div id="Maitland" class="tab-content">
+            <h3>Maitland</h3>
+            <p>write somthing</p>
+        </div>
+        <div id="Tweed Heads" class="tab-content">
+            <h3>Tweed Headst</h3>
+            <p>write somthing</p>
+        </div>
+        <div id="Wagga Wagga" class="tab-content">
+            <h3>Wagga Wagga</h3>
+            <p>write somthing</p>
+        </div>
+        <div id="Albury - Wodonga" class="tab-content">
+            <h3>Central Coast</h3>
+            <p>write somthing</p>
+        </div>
+        <div id="Albury - Wodonga" class="tab-content">
+            <h3>Central Coast</h3>
+            <p>write somthing</p>
+        </div>
+        <div id="Coffs Harbour" class="tab-content">
+            <h3>Coffs Harbour</h3>
+            <p>write somthing</p>
+        </div>
+        <div id="Port Macquarie" class="tab-content">
+            <h3>Port Macquarie</h3>
+            <p>write somthing</p>
+        </div>
+    </div>
+    <div id="Australian Capital Territory" class="tabcontent">
+        <div class="tabs">
+            <button class="tab-links" onclick="openCitys(event, 'hello')" id="defaultOpen">hello</button>
+            <button class="tab-links" onclick="openCitys(event, 'Newcastle')">Newcastle</button>
+            <button class="tab-links" onclick="openCitys(event, 'Central Coast')">Central Coast</button>
+            <button class="tab-links" onclick="openCitys(event, 'Wollongong')">Wollongong</button>
+            <button class="tab-links" onclick="openCitys(event, 'Maitland')">Maitland</button>
+            <button class="tab-links" onclick="openCitys(event, 'Tweed Heads')">Tweed Heads</button>
+            <button class="tab-links" onclick="openCitys(event, 'Wagga Wagga')">Wagga Wagga</button>
+            <button class="tab-links" onclick="openCitys(event, 'Albury - Wodonga')">Albury - Wodonga</button>
+            <button class="tab-links" onclick="openCitys(event, 'Coffs Harbour')">Coffs Harbour</button>
+            <button class="tab-links" onclick="openCitys(event, 'Port Macquarie')">Port Macquarie</button>
+            <button class="tab-links" onclick="openCitys(event, 'Coffs Harbour')">Coffs Harbour</button>
+            <button class="tab-links" onclick="openCitys(event, 'Port Macquarie')">Port Macquarie</button>
+            <button class="tab-links" onclick="openCitys(event, 'Coffs Harbour')">Coffs Harbour</button>
+            <button class="tab-links" onclick="openCitys(event, 'Port Macquarie')">Port Macquarie</button>
+            <button class="tab-links" onclick="openCitys(event, 'Coffs Harbour')">Coffs Harbour</button>
+            <button class="tab-links" onclick="openCitys(event, 'Port Macquarie')">Port Macquarie</button>
+            <button class="tab-links" onclick="openCitys(event, 'Coffs Harbour')">Coffs Harbour</button>
+            <button class="tab-links" onclick="openCitys(event, 'Port Macquarie')">Port Macquarie</button>
+        </div>
+
+        <div id="hello" class="tab-content">
+            <h3>hello</h3>
+            <p>write somthing.</p>
+        </div>
+        <div id="Newcastle" class="tab-content">
+            <h3>Newcastle</h3>
+            <p>write somthing</p>
+        </div>
+        <div id="Central Coast" class="tab-content">
+            <h3>Central Coast</h3>
+            <p>write somthing</p>
+        </div>
+        <div id="Wollongong" class="tab-content">
+            <h3>Wollongong</h3>
+            <p>write somthing</p>
+        </div>
+        <div id="Maitland" class="tab-content">
+            <h3>Maitland</h3>
+            <p>write somthing</p>
+        </div>
+        <div id="Tweed Heads" class="tab-content">
+            <h3>Tweed Headst</h3>
+            <p>write somthing</p>
+        </div>
+        <div id="Wagga Wagga" class="tab-content">
+            <h3>Wagga Wagga</h3>
+            <p>write somthing</p>
+        </div>
+        <div id="Albury - Wodonga" class="tab-content">
+            <h3>Central Coast</h3>
+            <p>write somthing</p>
+        </div>
+        <div id="Albury - Wodonga" class="tab-content">
+            <h3>Central Coast</h3>
+            <p>write somthing</p>
+        </div>
+        <div id="Coffs Harbour" class="tab-content">
+            <h3>Coffs Harbour</h3>
+            <p>write somthing</p>
+        </div>
+        <div id="Port Macquarie" class="tab-content">
+            <h3>Port Macquarie</h3>
+            <p>write somthing</p>
+        </div>
+    </div>
+    <div id="Tasmania" class="tabcontent">
+        <div class="tabs">
+            <button class="tab-links" onclick="openCitys(event, 'pink')" id="defaultOpen">pink</button>
+            <button class="tab-links" onclick="openCitys(event, 'Newcastle')">Newcastle</button>
+            <button class="tab-links" onclick="openCitys(event, 'Central Coast')">Central Coast</button>
+            <button class="tab-links" onclick="openCitys(event, 'Wollongong')">Wollongong</button>
+            <button class="tab-links" onclick="openCitys(event, 'Maitland')">Maitland</button>
+            <button class="tab-links" onclick="openCitys(event, 'Tweed Heads')">Tweed Heads</button>
+            <button class="tab-links" onclick="openCitys(event, 'Wagga Wagga')">Wagga Wagga</button>
+            <button class="tab-links" onclick="openCitys(event, 'Albury - Wodonga')">Albury - Wodonga</button>
+            <button class="tab-links" onclick="openCitys(event, 'Coffs Harbour')">Coffs Harbour</button>
+            <button class="tab-links" onclick="openCitys(event, 'Port Macquarie')">Port Macquarie</button>
+            <button class="tab-links" onclick="openCitys(event, 'Coffs Harbour')">Coffs Harbour</button>
+            <button class="tab-links" onclick="openCitys(event, 'Port Macquarie')">Port Macquarie</button>
+            <button class="tab-links" onclick="openCitys(event, 'Coffs Harbour')">Coffs Harbour</button>
+            <button class="tab-links" onclick="openCitys(event, 'Port Macquarie')">Port Macquarie</button>
+            <button class="tab-links" onclick="openCitys(event, 'Coffs Harbour')">Coffs Harbour</button>
+            <button class="tab-links" onclick="openCitys(event, 'Port Macquarie')">Port Macquarie</button>
+            <button class="tab-links" onclick="openCitys(event, 'Coffs Harbour')">Coffs Harbour</button>
+            <button class="tab-links" onclick="openCitys(event, 'Port Macquarie')">Port Macquarie</button>
+        </div>
+
+        <div id="pink" class="tab-content">
+            <h3>hello</h3>
+            <p>write somthing.</p>
+        </div>
+        <div id="Newcastle" class="tab-content">
+            <h3>Newcastle</h3>
+            <p>write somthing</p>
+        </div>
+        <div id="Central Coast" class="tab-content">
+            <h3>Central Coast</h3>
+            <p>write somthing</p>
+        </div>
+        <div id="Wollongong" class="tab-content">
+            <h3>Wollongong</h3>
+            <p>write somthing</p>
+        </div>
+        <div id="Maitland" class="tab-content">
+            <h3>Maitland</h3>
+            <p>write somthing</p>
+        </div>
+        <div id="Tweed Heads" class="tab-content">
+            <h3>Tweed Headst</h3>
+            <p>write somthing</p>
+        </div>
+        <div id="Wagga Wagga" class="tab-content">
+            <h3>Wagga Wagga</h3>
+            <p>write somthing</p>
+        </div>
+        <div id="Albury - Wodonga" class="tab-content">
+            <h3>Central Coast</h3>
+            <p>write somthing</p>
+        </div>
+        <div id="Albury - Wodonga" class="tab-content">
+            <h3>Central Coast</h3>
+            <p>write somthing</p>
+        </div>
+        <div id="Coffs Harbour" class="tab-content">
+            <h3>Coffs Harbour</h3>
+            <p>write somthing</p>
+        </div>
+        <div id="Port Macquarie" class="tab-content">
+            <h3>Port Macquarie</h3>
+            <p>write somthing</p>
+        </div>
+    </div>
+
+
+    </div>
+
+
+    <script>
+  filterSelection("all")
+  function filterSelection(c) {
+    var x, i;
+    x = document.getElementsByClassName("column");
+    if (c == "all") c = "";
+    for (i = 0; i < x.length; i++) {
+      w3RemoveClass(x[i], "show");
+      if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+    }
+  }
+
+  function w3AddClass(element, name) {
+    var i, arr1, arr2;
+    arr1 = element.className.split(" ");
+    arr2 = name.split(" ");
+    for (i = 0; i < arr2.length; i++) {
+      if (arr1.indexOf(arr2[i]) == -1) { element.className += " " + arr2[i]; }
+    }
+  }
+
+  function w3RemoveClass(element, name) {
+    var i, arr1, arr2;
+    arr1 = element.className.split(" ");
+    arr2 = name.split(" ");
+    for (i = 0; i < arr2.length; i++) {
+      while (arr1.indexOf(arr2[i]) > -1) {
+        arr1.splice(arr1.indexOf(arr2[i]), 1);
+      }
+    }
+    element.className = arr1.join(" ");
+  }
+
+
+  // Add actives class to the current button (highlight it)
+  var btnContainer = document.getElementById("myBtnContainer");
+  var btns = btnContainer.getElementsByClassName("btn");
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function () {
+      var current = document.getElementsByClassName("actives");
+      current[0].className = current[0].className.replace(" actives", " ");
+      this.className += " actives";
+    });
+  }
+
+
+
+
+
+
+    function openCity(evt, cityName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(cityName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+
+
+    document.getElementById("defaultOpen").click();
+
+
+
+
+    function openCitys(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tab-content");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tab-links");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+
+      document.getElementById("defaultOpen").click();
+
+
+
+
+    </script>
+
+</body>
+
+</html>     
